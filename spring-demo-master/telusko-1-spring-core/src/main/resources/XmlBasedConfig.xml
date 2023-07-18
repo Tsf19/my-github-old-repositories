@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- XML doesn't know what's bean tag, it knows only UserDefinedTag or CustomTag -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- <bean id="vehicle" class="com.tousif.XmlConfigDemo1.Bike"> -->
+	<bean id="vehicle" class="com.tousif.XmlConfigDemo1.Car">	
+	</bean>
+	
+	<bean id="tyre" class="com.tousif.XmlConfigDemo1.Tyre">
+	
+		<!-- property is using Setter of Tyre class to assign value -->
+		<!-- <property name="brand" value="MRF"></property> -->	<!-- SETTER_INJECTION -->
+ 
+ 		<constructor-arg value="MRF"></constructor-arg>	 <!-- CONSTRUCTOR_INJECTION -->
+ 			
+	</bean>
+	
+
+<!-- We need to just change CAr/Bike in XML, no need to compile Java code to Change vehichle Type -->
+
+</beans>

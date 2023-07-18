@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!--2. Definition for textEditor bean, Sequence of "constructor-arg" will be used-->
+<!--    
+   <bean id = "textEditor" class = "com.tousif.ConstructorBasedDependencyInjection7.TextEditor">
+      <constructor-arg ref = "spellChecker"/>
+      <constructor-arg ref = "spellCorrector"/>
+   </bean> 
+ -->
+ 
+ <!--4. Definition for textEditor bean, Index of "constructor-arg" will be used-->
+    <bean id = "textEditor" class = "com.tousif.ConstructorBasedDependencyInjection7.TextEditor">
+      <constructor-arg index = "0" ref  = "spellChecker"/>
+      <constructor-arg index = "1" ref = "spellCorrector"/>
+   </bean> 
+   
+   
+      <!-- Definition for spellChecker bean-->
+   <bean id = "spellChecker" class = "com.tousif.ConstructorBasedDependencyInjection7.SpellChecker"></bean>
+
+     <!-- Definition for spellCorrector bean-->
+   <bean id = "spellCorrector" class = "com.tousif.ConstructorBasedDependencyInjection7.SpellCorrector"></bean>
+
+
+</beans>

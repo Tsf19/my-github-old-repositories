@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Registration Form</title>
+</head>
+<body>
+	<form action="student-response.jsp">
+	
+		<label><mark>First</mark> Name: </label> <input type="text" name="firstName" /> <br /><br />		
+		
+		<label><mark>Last</mark> Name: </label> <input type="text" name="lastName" /> <br /><br />
+
+<!--DEMO of SELECT TAG in HTML-->
+		
+		<label>Country1 (select): </label>
+		<select name="country1">
+			<option>Brazil</option>
+			<option>France</option>
+			<option>Germany</option>
+			<option>India</option>
+			<option>Turkey</option>
+			<option>UK</option>
+			<option>USA</option>
+		</select> <br /><br />
+		
+<!--DEMO of DataList TAG in HTML-->
+		
+		<label>Country2 (datalist): </label> <input type="text" name="country2" list="dl">
+		<datalist id="dl">
+			<option>Brazil</option>
+			<option>France</option>
+			<option>Germany</option>
+			<option>India</option>
+<!--DataList TAG With & Without Closing Option-->
+			<option value="Turkey">
+			<option value="UK">
+			<option value="USA">
+		</datalist> <br /><br />
+		
+		
+		One Favorite Programming Language: <br />
+		C <input type="radio" name="favLang" value="c"><br />
+		C++ <input type="radio" name="favLang" value="c++"><br />
+		Java <input type="radio" name="favLang" value="java"><br />
+		C# <input type="radio" name="favLang" value="c#"><br />
+		
+		<br /><br />
+		
+		Favorite Programming Languages: <br />
+		C <input type="checkbox" name="favLangs" value="c"><br />
+		C++ <input type="checkbox" name="favLangs" value="c++"><br />
+		Java <input type="checkbox" name="favLangs" value="java"><br />
+		C# <input type="checkbox" name="favLangs" value="c#"><br />
+		
+		<br /><br />
+		<input type="submit" value="Submitting">		
+		
+	</form>
+</body>
+</html>

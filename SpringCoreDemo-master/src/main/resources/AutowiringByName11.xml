@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+<!-- configuration file Beans.xml in normal condition -->
+<!-- 
+   <bean id = "textEditor" class = "com.tousif.AutowiringByName11.TextEditor">
+      <property name = "spellChecker" ref = "spellChecker" />
+      <property name = "name" value = "Generic Text Editor" />
+   </bean>
+
+   <bean id = "spellChecker" class = "com.tousif.AutowiringByName11.SpellChecker"></bean>
+ -->
+ 
+ <!-- Using autowiring 'byName' -->
+   <bean id = "textEditor" class = "com.tousif.AutowiringByName11.TextEditor" autowire="byName">
+ 
+      <property name = "name" value = "Generic Text Editor" />
+   </bean>
+<!-- bean name must be "spellChecker", any other name will throw "NullPointerException" -->
+   <bean id = "spellChecker" class = "com.tousif.AutowiringByName11.SpellChecker"></bean>
+ 
+</beans>
